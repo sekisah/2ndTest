@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5LT-rD-1Qj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="B5S-Gt-3y7">
+            <objects>
+                <navigationController id="5LT-rD-1Qj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rkr-Eq-hrg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ykc-5z-LLV" kind="relationship" relationship="rootViewController" id="enm-2c-EtV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDj-Uc-dgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-592" y="129"/>
+        </scene>
+        <!--Masukan Step1 View Controller-->
+        <scene sceneID="vCe-2K-SVH">
+            <objects>
+                <viewController id="Ykc-5z-LLV" customClass="MasukanStep1ViewController" customModule="Semangat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EHc-QF-V3r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Masukan Nama" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BC2-MR-ZtA">
+                                <rect key="frame" x="20" y="173" width="335" height="36"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="br8-py-WOj">
+                                <rect key="frame" x="20" y="239" width="335" height="75"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="OLJ-3w-lSD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="AV8-Sa-gAf" kind="show" id="yae-YQ-aXf"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xgs-NP-N8s">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="br8-py-WOj" firstAttribute="top" secondItem="BC2-MR-ZtA" secondAttribute="bottom" constant="30" id="0y8-Ih-iAy"/>
+                            <constraint firstItem="BC2-MR-ZtA" firstAttribute="top" secondItem="rDF-lN-Pnv" secondAttribute="top" constant="109" id="2oE-hZ-qKz"/>
+                            <constraint firstItem="rDF-lN-Pnv" firstAttribute="trailing" secondItem="BC2-MR-ZtA" secondAttribute="trailing" constant="20" id="CSt-Rf-Uzy"/>
+                            <constraint firstItem="br8-py-WOj" firstAttribute="leading" secondItem="rDF-lN-Pnv" secondAttribute="leading" constant="20" id="Cos-k7-CZi"/>
+                            <constraint firstItem="BC2-MR-ZtA" firstAttribute="leading" secondItem="rDF-lN-Pnv" secondAttribute="leading" constant="20" id="Ih1-YH-K2B"/>
+                            <constraint firstItem="rDF-lN-Pnv" firstAttribute="trailing" secondItem="br8-py-WOj" secondAttribute="trailing" constant="20" id="qMK-4Z-ZMS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rDF-lN-Pnv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rX6-St-kcb"/>
+                    <connections>
+                        <outlet property="nameField" destination="BC2-MR-ZtA" id="e1w-cn-D8m"/>
+                        <outlet property="nextButton" destination="br8-py-WOj" id="tPW-A7-OT5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6jN-DB-M0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="127.28635682158921"/>
+        </scene>
+        <!--Masukan Step2 View Controller-->
+        <scene sceneID="uOv-Hr-HtN">
+            <objects>
+                <viewController id="AV8-Sa-gAf" customClass="MasukanStep2ViewController" customModule="Semangat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fqk-oL-1vx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZd-90-h9n">
+                                <rect key="frame" x="20" y="108" width="335" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzK-fu-6oK">
+                                <rect key="frame" x="20" y="258" width="335" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="6aO-gc-eEt"/>
+                                    <constraint firstAttribute="height" constant="56" id="KcO-I8-8lK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Pilih Guest">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uup-fz-qbx">
+                                <rect key="frame" x="20" y="170" width="335" height="61"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="96v-R2-y0u"/>
+                                    <constraint firstAttribute="height" constant="61" id="qGD-Jj-Uen"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Pilih Event">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ArY-Iw-f47" firstAttribute="trailing" secondItem="VZd-90-h9n" secondAttribute="trailing" constant="20" id="6of-ay-nWb"/>
+                            <constraint firstItem="hzK-fu-6oK" firstAttribute="leading" secondItem="Uup-fz-qbx" secondAttribute="leading" id="F5e-HJ-rcg"/>
+                            <constraint firstItem="VZd-90-h9n" firstAttribute="leading" secondItem="ArY-Iw-f47" secondAttribute="leading" constant="20" id="Ija-2C-hZa"/>
+                            <constraint firstItem="VZd-90-h9n" firstAttribute="top" secondItem="ArY-Iw-f47" secondAttribute="top" constant="44" id="Kvq-jQ-qgD"/>
+                            <constraint firstItem="ArY-Iw-f47" firstAttribute="trailing" secondItem="hzK-fu-6oK" secondAttribute="trailing" constant="20" id="RBI-mU-CCe"/>
+                            <constraint firstItem="hzK-fu-6oK" firstAttribute="leading" secondItem="ArY-Iw-f47" secondAttribute="leading" constant="20" id="Yv2-Bs-v3D"/>
+                            <constraint firstItem="hzK-fu-6oK" firstAttribute="top" secondItem="Uup-fz-qbx" secondAttribute="bottom" constant="27" id="kdk-3H-40g"/>
+                            <constraint firstItem="hzK-fu-6oK" firstAttribute="trailing" secondItem="Uup-fz-qbx" secondAttribute="trailing" id="lBa-5f-Yvt"/>
+                            <constraint firstItem="ArY-Iw-f47" firstAttribute="bottom" secondItem="hzK-fu-6oK" secondAttribute="bottom" constant="353" id="uRA-bG-ps4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ArY-Iw-f47"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E3x-9J-WI7"/>
+                    <connections>
+                        <outlet property="eventNextButton" destination="Uup-fz-qbx" id="ID9-7E-BZt"/>
+                        <outlet property="guestNextButton" destination="hzK-fu-6oK" id="c6p-OZ-h1p"/>
+                        <outlet property="milihFieldLabel" destination="VZd-90-h9n" id="hMG-7o-yNn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IS1-sZ-gNC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080.8" y="126.38680659670166"/>
+        </scene>
+    </scenes>
+</document>
